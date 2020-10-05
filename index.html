@@ -6,24 +6,29 @@
         .container{
             display: flex;
             height: 50px;
-            width: 100%;
-            margin: 0;
             padding: 0;
-            justify-content: space-around;
+            justify-content: space-between;
             box-shadow: 0 2px 5px -2px rgba(0,0,0,.5);
         }
         .menu , .extra{
             display: flex;
+            max-width: 1152px;
             justify-content: space-around;
-
+            margin: 0 auto;
+        }
+        body{
+            margin: 0;
         }
 
-        span{
+        nav{
             padding: 0 5px;
+            line-height: 50px;
+            vertical-align: center;
 
         }
-        span:hover{
-            background-color: cyan;
+        nav:hover{
+            background-color: rgba(0,250,100,0.1);
+            color: blue;
         }
         img{
             width: 20px;
@@ -35,15 +40,15 @@
 <body>
     <div class = "container">
         <div class = "menu">
-            <span><img src="logo.svg"></span>
-            <span>Home</span>
-            <span>Archives</span>
-            <span>Categories</span>
-            <span>Tags</span>
+            <nav><img src="logo.svg"></nav>
+            <nav>Home</nav>
+            <nav>Archives</nav>
+            <nav>Categories</nav>
+            <nav>Tags</nav>
         </div>
         <div class = "extra">
-            <span>Git</span>
-            <span>Search</span>
+            <nav>Git</nav>
+            <nav>Search</nav>
         </div>
     </div>
 </body>
