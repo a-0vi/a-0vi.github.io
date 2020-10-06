@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tangim Bae</title>
+    <title>Noob</title>
     <style type="text/css">
         .container{
             display: flex;
@@ -13,43 +13,50 @@
         .menu , .extra{
             display: flex;
             max-width: 1152px;
-            justify-content: space-around;
+            justify-content: space-between;
             margin: 0 auto;
         }
         body{
             margin: 0;
         }
 
-        nav{
-            padding: 0 5px;
-            line-height: 50px;
-            vertical-align: center;
-
-        }
-        nav:hover{
+        li:hover{
             background-color: rgba(0,250,100,0.1);
             color: blue;
         }
         img{
-            width: 20px;
-            height: 25px;
+            width: 24.5px;
+            height: 24.5px;
+        }
+        .menu-list , .extra-list{
+            display: flex;
+            padding-left: 0;
+            list-style-type: none;
+
+        }
+        li{
+            padding: 0 5px;
         }
 
     </style>
 </head>
 <body>
     <div class = "container">
-        <div class = "menu">
-            <nav><img src="logo.svg"></nav>
-            <nav>Home</nav>
-            <nav>Archives</nav>
-            <nav>Categories</nav>
-            <nav>Tags</nav>
-        </div>
-        <div class = "extra">
-            <nav>Git</nav>
-            <nav>Search</nav>
-        </div>
+        <nav class= "menu">
+            <ol class = "menu-list">
+                <li><img src="logo.svg"></li>
+                <li>Home</li>
+                <li>Archives</li>
+                <li>Categories</li>
+                <li>Tags</li>
+            </ol>
+        </nav>
+        <nav class = "extra">
+            <ol class = "extra-list">
+                <li>Git</li>
+                <li>Search</li>
+            </ol>
+        </nav>
     </div>
 </body>
 </html>
