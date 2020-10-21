@@ -50,7 +50,7 @@
             justify-content: space-between;
             padding-left: 0;
             max-width: 1152px;
-            margin: 42px auto;
+            margin: 21px auto;
         }
         .shortcuts{
             width : 24%;
@@ -72,7 +72,6 @@
         .info{
             font-family: ubuntu,roboto,open sans,microsoft yahei,sans-serif;
             text-align: center;
-            margin: 0;
         }
         .info-basic{
             margin-bottom: 21px;
@@ -164,9 +163,6 @@
         .social-links:hover{
             background-color: rgba(10, 10, 255, 0.1);
         }
-        .archives{
-            margin: 0;
-        }
         .card-header{
             margin: 0;
             margin-bottom: 10.5px;
@@ -232,7 +228,36 @@
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
         }
+        .post-stamp{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .header-margin{
+            margin-right: .75rem;
+        }
+        .header-link:hover{
+            color: #3273dc;
+        }
+        .post-title{
+            font-size: 2rem;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+        .code-background{
+            background-color: #ecedef;
+            padding: 0.25em .8em;
+            color: #4a4a4a;
+            border-radius: 3px;
+            text-align: justify;
+        }
+        .code-background p{
+            margin: 0;
+            line-height: 1.5;
 
+        }
     </style>
 </head>
 <body>
@@ -328,10 +353,99 @@
                     <div>Mathematica</div><div class="card-counter">0</div>
                 </a>
             </nav>
-
         </div>
         <div class="posts">
+            <div class="card post1">
+                <div class="post-stamp">
+                    <div class="card-header header-margin">2 hours ago</div>
+                    <div class="card-header">
+                        <a class="card-header header-link" href="#">Mathematica</a>
+                        /
+                        <a class="card-header header-margin header-link" href="#">variables</a>
+                    </div>
+                    <div class="card-header">10 minutes read (About 997 words)</div>
+                </div>
+                <h1 class="post-title">
+                    <a class="header-link" href="#">Variables in Mathematica</a>
+                </h1>
+                <p>
+                    আমরা ইতোমধ্যে ভ্যারিয়েবল কি এবং কিভাবে ইউজ করতে হয় তা দেখেছি।
+                    প্রতিটি ভ্যারিয়েবলেরই আলাদা নাম থাকে।
+                    তো এই নামকরণের কিছু নিয়ম ও কনভেনশন আছে যা আমরা এখন আলোচনা করবো।
 
+                </p>
+                <p>
+                    ১) ভ্যারিয়েবল এর  নামকরণ এর ব্যাপারে সর্বপ্রথম যে জিনিসটা আমাদের খেয়াল করতে হয় সেটা হচ্ছে অর্থপূর্ণ নাম নির্বাচন।
+                    যেমন: আমরা যদি দুইটা নাম্বার ভ্যারিয়েবল এ রেখে তারপর এদেরকে যোগ করতে  চাই তাহলে আমরা
+                </p>
+                <div class="code-background">
+                    <p>a = 2</p>
+                    <p>b = 7</p>
+                    <p>a + b</p>
+                </div>
+                <p>
+                    এভাবে ভ্যারিয়েবল এ মান এ্যাসাইন করেও যোগ কর‍তে পারি।
+                </p>
+                <p>
+                    আমরা এখানে ভ্যারিয়েবল এর নাম <code class="code-background">a</code> ও <code  class="code-background">b</code> দিয়েছি।
+                    আমরা চাইলে ভ্যারিয়েবল এর নাম <code class="code-background">hati</code>  ও <code class="code-background">ghora</code> ও দিতে পারতাম। সেক্ষেত্রেও এই যোগ এর ব্যাপারটা কাজ কর‍তো,  কোনো  error দেখাতো না।
+                </p>
+                <p>
+                    কিন্তু রিয়েল লাইফ প্রোগ্রাম সাধারণত অনেক বড় হয়, সেখানে অনেক ভ্যারিয়েবল থাকে এবং প্রতিটি ভ্যারিয়েবল একাধিক জায়গায় ইউজ হয়।এখন আমরা যদি ভ্যারিয়েবল এর নাম হাতি-ঘোড়া-কুকুর-বিড়াল দিয়ে রাখি তাহলে আমরা যখন সেই  প্রোগ্রাম টা লিখতে যাব তখন কোন্ ভ্যারিয়েবল কখন কোনজায়গাতে ইউজ করতে হবে সেটা প্রায়ই ওলটপালট করে ফেলবো, অনেকসময় ভুল ভ্যারিয়েবল ভুল জায়গায় ইউজ করে ফেলবো।
+                     আবার আমরা যখন কয়েক দিন পর আমাদের একই কোডটা আবার পড়তে নিব তখন হয়তো আমরা বুঝবো না কোন কাজের জন্য কোন ভ্যারিয়েবল ডিক্লেয়ার করেছিলাম।
+                </p>
+                <p>
+                    ভ্যারিয়েবল এর অর্থপূর্ণ নামকরণ আমাদেরকে এই সমস্যা থেকে মুক্তি দিতে পারে। আমরা যে কাজের জন্য যেই ভ্যারিয়েবলটা ইউজ করবো তার নাম যদি আমরা সেই কাজের সাথে মিল রেখে রাখি, তাহলে আমরা কোড দেখে সহজেই বুঝতে পারবো কোন ভ্যারিয়েবল কোন কাজ করতেছে।
+                </p>
+                <p>
+                    যেমন এখানে আমরা দুইটা সংখ্যা যোগের ক্ষেত্রে <code class="code-background">a</code> <code class="code-background">b</code> বা <code class="code-background">hati</code> <code class="code-background">ghora</code> ইউজ না করে <code class="code-background">number1</code> এবং <code class="code-background">number2</code> ইউজ করলে আমরা ইজিলি বুঝতে পারবো দুইটা সংখ্যা নিয়ে কোনো কাজ করা হবে এই ভ্যারিয়েবল দুইটা দিয়ে।
+                </p>
+                <p>
+                    আবার আমরা যদি দুইটা সংখ্যার ভাগফল অন্য একটা ভ্যারিয়েবল এ রাখতে চাই তাহলে কাজ টা এভাবেও করতে পারি।
+                </p>
+                <div class="code-background">
+                    <p>x = 10</p>
+                    <p>y = 2</p>
+                    <p>z = x / y</p>
+                </div>
+                <p>
+                    কিন্তু আমরা এভাবে না করে যদি
+                </p>
+                <div class="code-background">
+                    <p>dividend = 10 (ভাজ্য)</p>
+                    <p>divisor = 2 (ভাজক)</p>
+                    <p>quotient = dividend / divisor (ভাগফল)</p>
+                </div>
+                <p>
+                    এভাবে করি, তাহলে ভ্যারিয়েবল এর শুধু নাম দেখেই আমরা বলে দিতে পারবো এগুলা কোন কাজের জন্য ইউজ হচ্ছে।
+                </p>
+                <p>
+                    ২) ভ্যারিয়েবল এর নামের অর্থ বুঝতে অসুবিধা না হয় এইদিকটা মাথায় রেখে আমরা ভ্যারিয়েবল এর নাম যতখানি সম্ভব সংক্ষেপ করার চেষ্টা করবো।যেমন variable1 না লেখে আমরা var1 লিখতে পারি
+                    mumber1 না লিখে num1 লিখতে পারি।
+                    আবার answer, summation এগুলার পরিবর্তে ans, sum এগুলা লেখতে পারি।
+                </p>
+                <p>
+                    ৩) কিছু কিছু জিনিস ভ্যারিয়েবল এর নামে ইউজ করা যায় না। যেমন চারটা বেসিক অপারেটর + - * / যদি আমরা ভ্যারিয়েবল এর নামের মধ্যে ইউজ করতে চাই তাহলে error দেখাবে।
+                    কারণ, একটা ভ্যারিয়েবলের নাম যদি big+var দিতে চাই তাহলে ম্যাথমেটিকা কি  বুঝবে? আমরা big এবং var এর যোগফল চাচ্ছি নাকি big+var নিজেই একটা ভ্যারিয়েবল? একই কথা - * / ^ = এর ব্যাপারেও সত্যি। এই কনফ্লিকশন টা এড়ানোর জন্য, ভ্যারিয়েবল  এর নামের মধ্যে আমরা এসব চিহ্ন দিব না।
+                    আবার, ভ্যারিয়েবল এর নামের মধ্যে [] স্কয়ার ব্রাকেট দিলে ম্যাথম্যাটিকা কিভাবে বুঝবে যে সেটা ভ্যারিয়েবল এর নাম নাকি কোনো ফাংশনের প্যারামিটার?
+                    আমরা সামনে দেখবো যে কার্লি ব্রেস এর মধ্যে  {} লিস্ট রাখে, তো এই জন্য আবারো কনফ্লিকশন দূর করার জন্য আমরা ভ্যারিয়েবল এর মধ্যে কার্লি ব্রেইস দিতে পারবো না
+                </p>
+                <p>
+                    আবার, একটা ভ্যারিয়েবল যদি হয় <code class="code-background">num = 10</code> তাহলে এটাকে যদি আমরা 9 দিয়ে গুণ করতে চাই তাহলে  কয়েকভাবে করতে পারবো, যেমন
+                </p>
+                <div class="code-background">
+                    <p>num*9</p>
+                    <p>9num</p>
+                    <p>num(9)</p>
+                    <p>(9)num</p>
+                </div>
+                <p>
+                    আমরা দেখতে পাচ্ছি এভাবে একটা ভ্যারিয়েবল এর সাথে সংখ্যা গুণ করতে হয়।
+                    আমরা যদি খেয়াল করি তাহলে আমরা দেখতে পারবো, 9num এই গুণের কাজ করতেছে। তাই আমরা ভ্যারিয়েবল এর নাম কোনো সংখ্যা দিয়ে শুরু করতে পারবো না, কারণ ম্যাথমেটিকা তখন এটাকে সংখ্যা আর ভ্যারিয়েবলের গুণফল হিসেবে ট্রিট করবে। একই ব্যাখ্যা num(9) এর ক্ষেত্রেও প্রযোজ্য, অর্থাৎ ভ্যারিয়েবলের নামের মধ্যে parentheses বা ফার্স্ট ব্রাকেট থাকতে পারবে না।
+
+                    সংখ্যা দিয়ে শুরু হতে না পারলেও  ভ্যারিয়েবলের নামের  মধ্যে বা শেষে ইচ্ছামতো সংখ্যা থাকতে পারে।
+                </p>
+            </div>
 
         </div>
         <div class="extras">
