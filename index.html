@@ -36,19 +36,18 @@
         .left img{
             width: 25px;
         }
-        .nav-bar a:hover{
-            color: #3273dc;
-            background-color: #fafafa;
-        }
-        .nav-bar a:active{
-            color: #3273dc;
-            background-color: transparent;
-        }
         .nav-bar a{
             padding: 0 8px;
             display: flex;
             align-items: center;
             text-decoration: none;
+        }
+        .nav-bar a:hover:not(.active){
+            color: #3273dc;
+            background-color: #fafafa;
+        }
+        .active{
+            color: #3273dc;
         }
         .main{
             display: flex;
@@ -321,8 +320,8 @@
     <div class="header">
         <div class="nav-bar">
             <nav class="left">
-                <a href = "#"><img src="a.svg"></a>
-                <a href = "https://a-0vi.github.io">Home</a>
+                <a class = "active" href = "index.html"><img src="a.svg"></a>
+                <a class = "active" href = "index.html">Home</a>
                 <a href = "#">Archives</a>
                 <a href = "#">Categories</a>
                 <a href = "#">Tags</a>
